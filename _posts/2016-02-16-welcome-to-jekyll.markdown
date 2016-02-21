@@ -2,10 +2,14 @@
 layout: post
 title:  "使用Sketch绘制svg图标"
 date:   2016-02-16 23:15:28 +0800
-imgUrl: https://raw.githubusercontent.com/mangonob/image/master/src/thumb/2016-02-21-sketch-banner.png
+
+thumb: https://raw.githubusercontent.com/mangonob/image/master/src/thumb/2016-02-21-sketch-banner.png
+
+img: https://raw.githubusercontent.com/mangonob/image/master/src/2016-02-21-sketch-banner.png
+
 categories: jekyll update
 ---
-![图片](https://raw.githubusercontent.com/mangonob/image/master/src/2016-02-21-sketch-banner.png)
+![图片]({{ page.img }})
 
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
