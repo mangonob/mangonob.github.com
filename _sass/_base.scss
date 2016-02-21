@@ -45,6 +45,10 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+    /* add by Darwin */
+    display: block;
+    margin: 10px auto 10px auto;
+    border: solid 1px gray;
 }
 
 
