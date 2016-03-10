@@ -14,7 +14,7 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #484848;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -52,10 +52,6 @@ $on-laptop:        800px;
 "syntax-highlighting"
 ;
 
-
-
-
-
 // add by Darwin
 @import "manGoLib";
 
@@ -89,14 +85,15 @@ $on-laptop:        800px;
 }
 
 %animateMD {
-	@include allBrowserStyle("animation", moveDown 0.6s ease-in-outß);
+	@include allBrowserStyle("animation", moveDown 0.6s ease-in-out);
 }
 
 h1, header > * {
 	@extend %animateMD;
 }
 
-footer > * {
+
+footer > *, .rss-subscribe {
 	@extend %animateMU;
 }
 
@@ -126,22 +123,63 @@ $duration: 1;
 }
 
 // 图片下的说明文字
-li:after, li, li > * , li:hover:after, li:after{
 
-	@include allBrowserStyle(transition, height 1s);
+$duration: 0.5;
+li>div:after, li, li > * , li:hover:after, li:after{
+
+	@include allBrowserStyle(transition, height #{$duration}s);
 }
-li:after{
+li>div:after{
 	content: attr(excerpt);
 	opacity: 0;
 	overflow: hidden; 
-	width: 100px;
-	background-color: red;
-	display: block;
-	height: 0px;   
+	height: 0;
+	float: left;
+	clear: both;
 }
-li:hover:after{
+li>div:hover:after{
 	opacity: 1; 
+	display: block;
 	height: 100px;
+	content:"这里显示摘要";
 }
+
+
+$image-height: 65px;
+$image-width: 120px;
+
+
+.extra {
+	height:15px; 
+	width:100%; 
+	float:left; 
+	color: red;
+	display: block; 
+}
+
+.post-container{
+	overflow:hidden; 
+	box-shadow: 3px 3px 8px #888888; 
+	padding:10px;
+}
+
+.thumbimg{
+	width: $image-width;
+	height: $image-height; 
+	border: 1px gray solid; 
+	margin: 0;
+	margin-top: -15px; 
+	float:left; 
+	border-radius:5px;
+}
+
+.post-link {
+display:inline; margin-left:10px; float:left;
+
+}
+
+
+
+
 
 
