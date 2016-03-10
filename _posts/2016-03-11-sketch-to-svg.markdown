@@ -19,7 +19,6 @@ categories: jekyll update
 <div style="padding: 10px; border-radius: 10px; background:#ddd; border:1px solid bbb; "><h4>  关于Sketch：Sketch是OSX平台下为人称道的轻量级的设计工具，相对于Adobe公司出品的两款软件——针对平面设计的Photoshop，以及矢量插画软件Adobe illustrator，Sketch拥有更为清新的界面；更主要的是对于现代交互设计更为专注，更具有针对性的功能，希望通过这篇教程能让没接触过Sketch的读者对它有更多的了解。</h4></div>
 
 
-
 #### *闲话少说教程开始*
 
 

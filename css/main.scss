@@ -38,16 +38,110 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+	@media screen and (max-width: $device) {
+		@content;
+	}
 }
 
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+"base",
+"layout",
+"syntax-highlighting"
 ;
+
+
+
+
+
+// add by Darwin
+@import "manGoLib";
+
+
+@keyframes moveUp{
+	0% {
+		transform:translateY(42px); 
+		opacity:0;
+	}
+
+	100% {
+		transform:translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes moveDown{
+	0% {
+		transform:translateY(-42px); 
+		opacity:0;
+	}
+
+	100% {
+		transform:translateX(0);
+		opacity: 1;
+	}
+}
+
+%animateMU {
+	@include allBrowserStyle("animation", moveUp 0.6s ease-in-out);
+}
+
+%animateMD {
+	@include allBrowserStyle("animation", moveDown 0.6s ease-in-outß);
+}
+
+h1, header > * {
+	@extend %animateMD;
+}
+
+footer > * {
+	@extend %animateMU;
+}
+
+
+
+
+@keyframes moveLeft{
+	0% {
+		transform:translateX(100px); 
+		opacity:0;
+	}
+
+	100% {
+		transform:translateX(0);
+		opacity: 1;
+	}
+}
+
+
+$total_delay: 1/* s */;
+$posts_on_one_page: 20;
+$duration: 1;
+@for $i from 1 through $posts_on_one_page {
+	#post-#{$i} {
+		@include allBrowserStyle(animation, moveLeft #{$duration}s ease-in-out #{$i / 20 * $total_delay}s );		
+	}
+}
+
+// 图片下的说明文字
+li:after, li, li > * , li:hover:after, li:after{
+
+	@include allBrowserStyle(transition, height 1s);
+}
+li:after{
+	content: attr(excerpt);
+	opacity: 0;
+	overflow: hidden; 
+	width: 100px;
+	background-color: red;
+	display: block;
+	height: 0px;   
+}
+li:hover:after{
+	opacity: 1; 
+	height: 100px;
+}
+
+

@@ -1,0 +1,79 @@
+@mixin allBrowserStyle($style: empty-style, $value: empty-value){
+	-webkit-#{$style}: $value;
+	-moz-#{$style}: $value;
+	-o-#{$style}: $value;
+	-ms-#{$style}: $value;
+	#{$style}: $value;
+}
+
+// 灰度计算函数
+@function gray($color) {
+	@return floor((red($color) * 299 +
+	green($color) * 587 + 
+	blue($color) * 114 + 500 /* round */) / 1000);
+}
+// 灰度计算函数结束
+
+// 平方根计算函数
+@function sqrt($num, $time: 42) {
+	@if type-of($num) != "number" {
+	 @error "sqrt in ManGoLib.scss Error:
+	  @ we get \"#{$num}\" but it not a number";
+	}
+	$r: $num;
+	@for $i from 0 to $time {
+		$r: ($r + $num / $r) / 2;
+	}
+	@return $r;
+} 
+// 平方根计算函数结束
+
+//
+@function assertNumber($number) {
+	@if type-of($number) != "number" {
+		@error "Error: we need a type of number but not \"#{number}\"";
+	}
+}
+
+@function assertBool($b) {
+	@if type-of($b) != "bool" {
+		@error "Error: we need a type of bool but not \"#{$b}\"" 
+	}
+}
+
+@function assertColor($c) {
+	@if type-of($b) != "color" {
+		@error "Error: we need a type of bool but not \"#{$c}\""
+	}
+}
+//
+
+
+@function pow($num, $time) {
+
+	@if type-of($num) != "number" {
+	 @error "sqrt in ManGoLib.scss Error:
+	  @ we get \"#{$num}\" but it not a number";
+	}
+
+	@if type-of($time) != "number" {
+	 @error "sqrt in ManGoLib.scss Error:
+	  @ we get \"#{$time}\" but it not a number";
+	}
+
+	$r: 1;
+	@for $i from 0 to $time {
+		$r: $r * $num;
+	}
+	@return $r;
+}
+
+// 保留数字的小数部分
+@function float($num, $bit: 2) {
+	// $u: unit(num);
+	// $a: pow(10, $bit);
+}
+
+
+
+
