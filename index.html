@@ -11,7 +11,7 @@ layout: default
     {% assign i = i | plus: 1 %}
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-      <div class="post-container">
+      <div class="post-container"   excerpt="{{ post.excerpt | strip_html }}">
 
         <div class="extra" ></div>
         {% if post.thumb %}

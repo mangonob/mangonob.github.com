@@ -5,7 +5,7 @@
  
 html, body{
     min-height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body, h1, h2, h3, h4, h5, h6,
@@ -22,8 +22,9 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+
     color: $text-color;
-    background: linear-gradient(#fff, #ccc);
+    background-color: $base-background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;

@@ -20,8 +20,15 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+highlighter: pygments
+
+sass:
+  sass_dir:       _sass
+  style:          :expanded
+
 # by Darwin
 gems: [jekyll-paginate]
 paginate: 20
 paginate_path: "/page:num"
-excerpt_separator: ""
+
+excerpt_separator: "<!--break-->"
