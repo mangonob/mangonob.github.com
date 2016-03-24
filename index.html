@@ -13,8 +13,8 @@ layout: default
 
       <div class="post-container"   excerpt="{{ post.excerpt | strip_html }}">
 
-        <div class="extra" ></div>
         {% if post.thumb %}
+        <div class="extra" ></div>
         <a class="thumb" href="{{ post.url | prepend: site.baseurl }}"><img class="thumbimg" src="{{post.thumb}}"></img></a>
         {% endif %}
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

@@ -17,10 +17,29 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-# Build settings
-markdown: kramdown
+#Build settings
+kramdown:
+  input: GFM
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+  enable_coderay: true
+  syntax_highlighter: rouge
+  coderay:
+    coderay_line_numbers: nil
 
-highlighter: pygments
+highlighter: pygments 
+
+# style of pygments 
+# $ pygmentize -f html -S friently -a .highlight > css/pygments.css
+# ['manni', 'igor', 'lovelace', 'xcode', 
+# 'vim', 'autumn', 'vs', 'rrt', 
+# 'native', 'perldoc', 'borland', 
+# 'tango', 'emacs', 'friendly', 'monokai', 
+# 'paraiso-dark', 'colorful', 'murphy', 'bw', 
+# 'pastie', 'algol_nu', 'paraiso-light', 'trac', 
+# 'default', 'algol', 'fruity']
 
 sass:
   sass_dir:       _sass

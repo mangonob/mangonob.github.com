@@ -2,11 +2,9 @@
 layout: post
 title:  "使用Sketch绘制svg图标"
 date:   2016-02-21 23:45 +0800
-
 thumb: http://ww2.sinaimg.cn/small/da914f1fgw1f1vbhhihbtj20m80ciac0.jpg
-
 img: http://ww2.sinaimg.cn/mw690/da914f1fgw1f1vbhhihbtj20m80ciac0.jpg
-
+share: http://ww2.sinaimg.cn/mw690/da914f1fgw1f1vbhhihbtj20m80ciac0.jpg
 categories: jekyll update
 ---
 
